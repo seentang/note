@@ -26,28 +26,28 @@
 
 ## 注释常用符号
 
-@file 档案的批注说明。
-@author 作者的信息
-@brief 用于class 或function的简易说明 eg：@brief 本函数负责打印错误信息串
-@param 主要用于函数说明中，后面接参数的名字，然后再接关于该参数的说明
-@return 描述该函数的返回值情况eg: @return 本函数返回执行结果，若成功则返回TRUE，否则返回FLASE
-@retval 描述返回值类型 eg: @retval NULL 空字符串。@retval !NULL 非空字符串。
-@note 注解
-@attention 注意
-@warning 警告信息
-@enum 引用了某个枚举，Doxygen会在该枚举处产生一个链接 eg：@enum CTest::MyEnum
-@var 引用了某个变量，Doxygen会在该枚举处产生一个链接 eg：@var CTest::m_FileKey
-@class 引用某个类，格式：@class \<name\> [\<header-file\>] [\<header-name\>] eg:@class CTest "inc/class.h"
-@exception 可能产生的异常描述 eg: @exception 本函数执行可能会产生超出范围的异常
-@todo 对将要做的事情进行注释
-@see 一段包含其他部分引用的注释，中间包含对其他代码项的名称，自动产生对其的引用链接。
-@relates \<name\> 通常用做把非成员函数的注释文档包含在类的说明文档中。
-@since 通常用来说明从什么版本、时间写此部分代码。
-@code  在注释中开始说明一段代码，直到@endcode命令。
-@endcode  在注释中代码段的结束。
-@pre 用来说明代码项的前提条件。
-@post 用来说明代码项之后的使用条件。
-@deprecated 这个函数可能会在将来的版本中取消。
-@defgroup 模块名
-@class 声明一个类
-@fn 声明一个函数
+- @file 档案的批注说明。
+- @author 作者的信息
+- @brief 用于class 或function的简易说明 eg：@brief 本函数负责打印错误信息串
+- @param 主要用于函数说明中，后面接参数的名字，然后再接关于该参数的说明
+- @return 描述该函数的返回值情况eg: @return 本函数返回执行结果，若成功则返回TRUE，否则返回FLASE
+- @retval 描述返回值类型 eg: @retval NULL 空字符串。@retval !NULL 非空字符串。
+- @note 注解
+- @attention 注意
+- @warning 警告信息
+- @enum 引用了某个枚举，Doxygen会在该枚举处产生一个链接 eg：@enum CTest::MyEnum
+- @var 引用了某个变量，Doxygen会在该枚举处产生一个链接 eg：@var CTest::m_FileKey
+- @class 引用某个类，格式：@class \<name\> [\<header-file\>] [\<header-name\>] eg:@class CTest "inc/class.h"
+- @exception 可能产生的异常描述 eg: @exception 本函数执行可能会产生超出范围的异常
+- @todo 对将要做的事情进行注释
+- @see 一段包含其他部分引用的注释，中间包含对其他代码项的名称，自动产生对其的引用链接。
+- @relates \<name\> 通常用做把非成员函数的注释文档包含在类的说明文档中。
+- @since 通常用来说明从什么版本、时间写此部分代码。
+- @code  在注释中开始说明一段代码，直到@endcode命令。
+- @endcode  在注释中代码段的结束。
+- @pre 用来说明代码项的前提条件。
+- @post 用来说明代码项之后的使用条件。
+- @deprecated 这个函数可能会在将来的版本中取消。
+- @defgroup 模块名
+- @class 声明一个类
+- @fn 声明一个函数
