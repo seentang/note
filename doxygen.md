@@ -7,8 +7,8 @@
 ## Doxygen下载安装
 
 >[doxygen](http://www.stack.nl/~dimitri/doxygen/download.html) 可能需要翻墙
-[htmlhelp](https://msdn.microsoft.com/en-us/library/ms669985.aspx) 用Doxygen自动生成chm
-[Graphviz](http://www.skycn.com/soft/appid/6971.html)是一个由AT&T实验室启动的开源工具包，用于绘制DOT语言脚本描述的图形。Doxygen 使用 graphviz 自动生成类之间和文件之间的调用关系图
+>[htmlhelp](https://msdn.microsoft.com/en-us/library/ms669985.aspx) 用Doxygen自动生成chm
+>[Graphviz](http://www.skycn.com/soft/appid/6971.html)是一个由AT&T实验室启动的开源工具包，用于绘制DOT语言脚本描述的图形。Doxygen 使用 graphviz 自动生成类之间和文件之间的调用关系图
 
 ## 配置demo
 

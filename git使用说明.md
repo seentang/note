@@ -1,7 +1,6 @@
-## git 说明
+# git 说明
 
-为啥选用git，而不是svn
-
+>为啥选用git，而不是svn
 
 ## git服务器搭建  Gogs
 
@@ -20,6 +19,5 @@
  -- git add .  提交合并后的最新代码
  -- git rebase --continue 合并刚刚的两次commit为一次 commit，净化版本历史
  -- git push 把本地分支合并好的最新代码，提交到远程代码仓库
- - git log 查看历史
- - git checkout 导出指定版本，指定文件
- - 
+- git log 查看历史
+- git checkout 导出指定版本 指定文件  git checkout \<hash\> \<filename\>
