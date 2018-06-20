@@ -2,10 +2,30 @@
 
 [TOC]
 
+## 函数
+
+- __stdcall __cdecl __fastcall __thiscall
+
+  - __cdecl默认方式，调用函数负责清空堆栈代码。因此支持动态变量，文件可能比__stdcall大。_functionname / ?functionname@@YA******@Z
+  - __stdcall 多用于windows,回调函数。_functionname@number / ?functionname@@YG******@Z
+  - __fastcall 尽可能在寄存器中传递。从左开始不大于4字节的参数放入CPU的ECX和EDX寄存器，其余参数从右向左入栈。@functionname@nmuber / ?functionname@@YI******@Z
+  - __thiscall c++成员函数默认的调用约定。this指针在最后参数入栈后入栈。参数个数是否一定，决定自己清理，还是调用者清理。
+
+> *****为函数返回类型和参数列表
+> 函数实现和函数定义使用了不同协议，函数无法调用
+> c/c++ 函数无法直接调用，需要特殊处理 extern "c"
+
+## vc编译器
+
+- mt mtd md mdd t表示lib d表示dll 最后一个d表示是否调试
+- /GR 运行时检查对象类型 /GR-取消
+- /EH{s|a}[c][-] 异常处理  s表示同步 a表示异步 c 表示extern C 函数从不引发异常
+- /Ob{0|1|2} 0 表示禁用内联展开 1 只展开inline 或 __inline或 c++的成员函数 2 除了标记的还可以展开编译器选择的任何函数
+
 ## const volatile mutable
 
 - const
-  - const 修饰变量和指针，表示不可变，修饰指针时可以根据const和*号位置，确定时指针本省不变，还是内容不变。
+  - const 修饰变量和指针，表示不可变，修饰指针时可以根据const和*号位置，确定时指针本身不变，还是内容不变。
   - 修饰函数参数。表示函数中不能修改参数本身或参数中包含的值。
   - 修饰类对象，对象指针，对象引用。修饰对象，对象任何非const成员都不能调用。
   - 修饰成员变量。在某个对象的生存期是常量，不能在类声明中初始化，只能在类的构造函数初始化列表中
@@ -28,3 +48,26 @@
 - mutable
 
   - mutable修饰的变量，将永远处于可变状态，即使在const的函数中
+
+## malloc calloc  realloc alloca
+
+### 内存分配方式
+
+- 静态存贮区域分配
+> 编译就已分配好内存，整个运行期间都存在.全局变量 static变量
+
+- 栈
+
+>在函数执行时，函数内部局部变量的存贮单元可以在栈上分配，函数执行时自动释放，栈内存分配运算内置于处理器的指令集中，效率高，大小有限。
+
+- 堆
+
+> 运行时使用malloc或new申请的内存，自己决定何时用free或delete释放内存。特别要注意的内存
+
+### 申请函数
+
+- alloca向栈申请内存，无序释放。
+- malloc分配的内存是位于堆中的,并且没有初始化内存的内容,因此基本上malloc之后,调用函数memset来初始化这部分的内存空间
+- calloc则将初始化这部分的内存,设置为0.
+- realloc则对malloc申请的内存进行大小的调整.realloc数据可能被移动，返回的有可能时一个全新的地址
+- free释放 new的需要delete.

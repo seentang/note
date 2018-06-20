@@ -14,6 +14,8 @@
 
 [Doxyfile demo](./Doxyfile) File->Open选择配置文件，打开后选择自己项目,修改项目名,项目描述即可使用. 具体配置参考网上教程 [doxygen配置](https://blog.csdn.net/andy_93/article/details/53125776) <strong>不保证长期有效<strong>
 
+>修改html header或footer 选择自己写的html文件即可
+
 ## 错误记录
 
 - 字符编码错误
