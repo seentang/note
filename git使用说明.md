@@ -20,6 +20,7 @@
 项目目录下 .git/config  增加
 [credential]
 helper = store
+> git config credential.helper store
 
 ### 对比工具配置
 
