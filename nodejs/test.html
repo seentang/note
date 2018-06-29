@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css" media="screen">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container .aaa li{
+            width: 100px;
+            height: 20px;
+            background: #fff;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        .container{
+            border: 1px solid #000;
+        }
+        .container:hover ul.aaa>li:nth-child(2){
+            background: #000;
+        }
+
+        .div{
+            width: 100px;
+            height: 20px;
+            background: #fff;
+            margin-bottom: 10px;
+            list-style: none; 
+        }
+
+        .div:hover spwan{
+            background:#FFF;
+            color:blue
+        }
+        li[mstyle] {
+            color:red;
+        }
+
+        #text {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="aaa">
+            <li id="text">1</li>
+            <li id="text">2</li>
+            <li mstyle="">3</li>
+            <li mstyle="">4</li>
+        </ul>       
+    </div>
+
+    <div class="div">
+        <spwan mstyle="">测试文字</spwan>
+    </div>
+    
+</body>
+</html>`
