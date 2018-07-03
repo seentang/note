@@ -81,6 +81,7 @@ System.out.println(converted);
 - 方法和构造函数引用
 > 允许你通过::关键字获取方法或者构造函数的的引用.
 
+
 ```java
 Converter<String, Integer> converter = Integer::valueOf;  
 Integer converted = converter.convert("123");  
