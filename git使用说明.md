@@ -56,3 +56,15 @@ cmd = 'C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe' -merge -result=\"$
 - git stash保存本地修改
 - git reset 放弃本地修改还原历史版本
 - git checkout 导出指定版本
+
+### .gitignore
+
+> 过滤文件
+- /directory/
+- *.suffix  abc?.suffix
+- /directory/filename
+
+> 添加规则
+
+1. /directory/  
+2. !/directory/filename 仅添加directory下的filename文件
